@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --lightblack: #0B0B09;
+    --darkpurple: #3E065F;
+    --purple: #700B97;
+    --lightsatpurple: #8E05C2;
+    --morelightpurple: #A87AFF;
+
+    --purple-lightest: #E2D5F1; /* 90% */
+    --purple-lighter: #C4ABE2;  /* 75% */
+    --purple-light: #A680D3;    /* 60% */
+    --purple-medium: #8756C4;   /* 45% */
+    --purple-dark: #692CA5;     /* 30% */
+    --purple-darker: #4B0287;   /* 15% */
+    --purple-darkest: #2C0059;  /* 5% */
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: var(--lightblack);
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: var(--purple-lightest);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-grid {
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    transition: 0.5s;
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple);
+    color: var(--purple-lightest);
+    font-size: 16px;
+    font-style: bold;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card:hover {
+    transition: 0.15s;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(200, 118, 255, 0.3) 0 0 20px 10px;
+    background-color: #7e0daa;
+    color: var(--purple-lightest);
+}
+
+.card.flip {
+    transition: 0.5s;
+    background-color: var(--purple-lighter);
+    color: var(--purple-darkest);
+}
+
+.card.matched {
+    transition: 0.5s;
+    background-color: var(--purple-darker);
+    color: var(--purple-lightest);
+}
+
+.new-game-btn {
+    transition: 0.5s;
+    color: #0B0B09;
+    background-color: var(--purple-lightest);
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.new-game-btn:hover{
+    transition: 0.5s;
+    color: #0B0B09;
+    background-color: var(--purple-lighter);
+}
+
+.score {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: var(--purple-lightest);
+    font-style: bold;
+}
+
+.definition {
+    font-size: 18px;
+    color: var(--purple-lighter);
+    text-align: center;
+    max-width: 400px;
+}
