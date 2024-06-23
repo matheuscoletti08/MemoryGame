@@ -28,11 +28,24 @@ body {
     background-color: var(--lightblack);
     margin: 0;
     padding: 20px;
+    height: 100vh;
 }
 
 h1 {
     margin-bottom: 20px;
     color: var(--purple-lightest);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container img {
+    border-radius: 2%;
+    margin: 0;
+    border: var(--purple) 1px 0px 2px;
 }
 
 .game-container {
