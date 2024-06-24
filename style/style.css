@@ -41,6 +41,19 @@ h1 {
     text-align: center;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.container img {
+    border-radius: 2%;
+    margin: 0;
+    border: var(--purple) 1px 0px 2px;
+}
+
 .game-container {
     display: flex;
     flex-direction: column;
