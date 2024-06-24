@@ -133,10 +133,10 @@ h1 {
     padding: 8px;
 }
 
-@media (max-width: 600px){
+@media (min-width: 600px){
 
     body{
-        transform: scale(1);
+        transform: scale(1.3);
     }
     .card-grid {
     transition: 0.5s;
