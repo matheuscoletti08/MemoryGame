@@ -16,57 +16,54 @@
     --purple-darkest: #2C0059;  /* 5% */
 }
 
-*{
+* {
     font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Arial, sans-serif;
+    justify-content: center;
+    font-family: 'Ubuntu', sans-serif;
     background-color: var(--lightblack);
     margin: 0;
-    padding: 20px;
-    height: 100vh;
+    padding: 10px;
+    min-height: 100vh;
+    transform: scale(0.9); /* Reduz o tamanho do conteúdo em 10% */
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: var(--purple-lightest);
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-.container img {
-    border-radius: 2%;
-    margin: 0;
-    border: var(--purple) 1px 0px 2px;
+    max-width: 90%;
+    text-align: center;
 }
 
 .game-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 500px; /* Largura máxima para o jogo */
+    width: 100%;
+    padding: 10px;
 }
 
 .card-grid {
     transition: 0.5s;
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    gap: 10px;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Mantém a grade 4x4 */
+    gap: 5px;
+    margin-bottom: 10px;
+    max-width: 100%; /* Ocupa toda a largura disponível */
+    justify-items: center; /* Centraliza as colunas horizontalmente */
 }
 
 .card {
     transition: 0.5s;
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Reduz o tamanho das cartas */
+    height: 80px;
     perspective: 1000px;
     cursor: pointer;
     display: flex;
@@ -74,17 +71,17 @@ h1 {
     justify-content: center;
     background-color: var(--purple);
     color: var(--purple-lightest);
-    font-size: 16px;
-    font-style: bold;
-    border-radius: 8px;
+    font-size: 14px; /* Diminui o tamanho da fonte */
+    font-weight: bold;
+    border-radius: 6px;
     text-align: center;
 }
 
 .card:hover {
     transition: 0.15s;
-    width: 100px;
-    height: 100px;
-    box-shadow: rgba(200, 118, 255, 0.3) 0 0 20px 10px;
+    width: 80px;
+    height: 80px;
+    box-shadow: rgba(200, 118, 255, 0.3) 0 0 15px 5px;
     background-color: #7e0daa;
     color: var(--purple-lightest);
 }
@@ -105,28 +102,45 @@ h1 {
     transition: 0.5s;
     color: #0B0B09;
     background-color: var(--purple-lightest);
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 8px 16px; /* Diminui o padding do botão */
+    font-size: 14px;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 300px;
 }
-.new-game-btn:hover{
+
+.new-game-btn:hover {
     transition: 0.5s;
     color: #0B0B09;
     background-color: var(--purple-lighter);
 }
 
 .score {
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin-bottom: 10px;
+    font-size: 18px; /* Reduz o tamanho da fonte */
     color: var(--purple-lightest);
-    font-style: bold;
+    font-weight: bold;
 }
 
 .definition {
-    font-size: 18px;
+    font-size: 16px; /* Reduz o tamanho da fonte */
     color: var(--purple-lighter);
     text-align: center;
-    max-width: 400px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+@media (max-width: 600px){
+    .card-grid {
+    transition: 0.5s;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Mantém a grade 4x4 */
+    gap: 5px;
+    margin-bottom: 10px;
+    max-width: 100%; /* Ocupa toda a largura disponível */
+    justify-items: center; /* Centraliza as colunas horizontalmente */
+}
 }
